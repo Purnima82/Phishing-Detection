@@ -1,0 +1,30 @@
+{
+  "name": "PhishGuard AI — Phishing Detection",
+  "short_name": "PhishGuard",
+  "description": "Real-time phishing website detection using Machine Learning. 97.51% accuracy.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050A14",
+  "theme_color": "#00C8F0",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/app/static/icon_32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/app/static/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/app/static/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["security", "utilities"],
+  "lang": "en"
+}
