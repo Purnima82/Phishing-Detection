@@ -163,7 +163,7 @@ This will produce `phishing_model_rf.pkl`, `scaler_rf.pkl`, and `eval_results.js
 streamlit run app.py
 ```
 
-Open your browser at **http://localhost:8501**
+Open your browser at **https://phishing-detection-jfvf.onrender.com/**
 
 ---
 
