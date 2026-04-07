@@ -702,9 +702,8 @@ footer p {
 
 <script>
 // ── Config ───────────────────────────────────────────────────
-const API = (window.location.port === '8000' || window.location.port === '')
-  ? window.location.origin
-  : 'http://localhost:8000';
+// Works on localhost:8000 AND any deployed domain (Render, Vercel, etc.)
+const API = window.location.origin;
 
 // ── Health check ─────────────────────────────────────────────
 async function checkHealth() {
