@@ -57,6 +57,20 @@ st.set_page_config(page_title="PhishGuard AI", page_icon="🛡️",
                    layout="wide", initial_sidebar_state="expanded")
 
 # ── CSS ───────────────────────────────────────────────────────
+st.markdown("""
+<head>
+<link rel="icon" type="image/x-icon" href="/app/static/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/app/static/icon_32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/app/static/apple-touch-icon.png">
+<link rel="manifest" href="/app/static/manifest.json">
+<meta name="theme-color" content="#050A14">
+<meta name="description" content="PhishGuard AI — Real-time phishing detection. 97.51% accuracy.">
+<meta property="og:title" content="PhishGuard AI — Phishing Detection System">
+<meta property="og:description" content="Scan any URL instantly. 97.51% accurate ML model.">
+<meta property="og:image" content="/app/static/icon-512.png">
+</head>
+""", unsafe_allow_html=True)
+
 st.markdown(f"""<style>
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;600;700;900&display=swap');
 html,body,[class*="css"]{{font-family:'Exo 2',sans-serif;background:{C["bg"]};color:{C["white"]};}}
