@@ -135,12 +135,6 @@ def clear_history():
 def health():
     return {"status": "ok", "model": type(model).__name__}
 
-# ── your existing last route ──────────────────────────────────
-@app.get("/icon-512.png", include_in_schema=False)
-def get_icon_512():
-    return FileResponse(_path("icon-512.png"))
-
-
 # ── Keep-alive (add below) ────────────────────────────────────
 async def keep_alive():
     await asyncio.sleep(60)
