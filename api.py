@@ -135,6 +135,30 @@ def clear_history():
 def health():
     return {"status": "ok", "model": type(model).__name__}
 
+# ── your existing last route ──────────────────────────────────
+@app.get("/icon-512.png", include_in_schema=False)
+def get_icon_512():
+    return FileResponse(_path("icon-512.png"))
+
+
+# ── Keep-alive (add below) ────────────────────────────────────
+async def keep_alive():
+    await asyncio.sleep(60)
+    while True:
+        try:
+            async with httpx.AsyncClient() as client:
+                await client.get(
+                    "https://phishing-detection-jfvf.onrender.com/health",
+                    timeout=10
+                )
+            print("Keep-alive ping sent")
+        except Exception as e:
+            print(f"Keep-alive failed: {e}")
+        await asyncio.sleep(600)
+
+@app.on_event("startup")
+async def startup_event():
+    asyncio.create_task(keep_alive())
 
 # ── Mount static/ folder if it exists ────────────────────────
 static_dir = _path("static")
