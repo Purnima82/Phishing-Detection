@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛡️ PhishGuard AI
+# PhishGuard AI
 ### Real-Time Phishing Website Detection System
 
 [![Python](https://img.shields.io/badge/Python-3.9+-3776ab?style=flat&logo=python&logoColor=white)](https://python.org)
@@ -12,13 +12,13 @@
 
 **A machine learning-powered web application that detects phishing websites in real-time using 30 URL and domain features, achieving 97.51% accuracy with a Random Forest classifier trained on 11,055 samples.**
 
-[🔍 Try the App](#getting-started) · [📊 Model Performance](#model-performance) · [🚀 Features](#features) · [📁 Project Structure](#project-structure)
+[Try the App](#getting-started) · [Model Performance](#model-performance) · [Features](#features) · [Project Structure](#project-structure)
 
 ---
 
 </div>
 
-## 📌 Overview
+## Overview
 
 Phishing attacks are one of the most common cyber threats, with over 700,000 phishing sites reported in 2025 alone. Traditional blacklist-based systems fail against zero-day attacks. **PhishGuard AI** uses machine learning to detect phishing websites based on structural and behavioral URL features — no blacklists needed.
 
@@ -26,26 +26,26 @@ This project was developed as a Final Year B.Tech project at **Babu Banarasi Das
 
 ---
 
-## ✨ Features
+## Features
 
 | Feature | Description |
 |---|---|
-| 🔍 **Real-Time URL Scanner** | Paste any URL and get instant Phishing / Suspicious / Legitimate verdict |
-| 📊 **Analytics Dashboard** | Live charts of scan history, risk trends, and result distributions |
-| 🎯 **Model Performance Page** | ROC curve, confusion matrix, algorithm comparison, feature importances |
-| 📜 **Scan History** | SQLite-backed persistent history with filter and sort |
-| 🧠 **30-Feature Analysis** | Full breakdown of every signal used in the prediction |
-| 🛡️ **Chrome Extension** | Real-time protection in your browser with badge alerts and warning banners |
+| **Real-Time URL Scanner** | Paste any URL and get instant Phishing / Suspicious / Legitimate verdict |
+| **Analytics Dashboard** | Live charts of scan history, risk trends, and result distributions |
+| **Model Performance Page** | ROC curve, confusion matrix, algorithm comparison, feature importances |
+| **Scan History** | SQLite-backed persistent history with filter and sort |
+| **30-Feature Analysis** | Full breakdown of every signal used in the prediction |
+| **Chrome Extension** | Real-time protection in your browser with badge alerts and warning banners |
 
 ---
 
-## 🧠 Model Performance
+## Model Performance
 
 The system was trained and evaluated on the **UCI Phishing Websites Dataset** (11,055 samples, 30 features).
 
 | Algorithm | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
 |---|---|---|---|---|---|
-| ✅ **Random Forest** | **97.51%** | **97.93%** | **96.43%** | **97.17%** | **99.64%** |
+| **Random Forest** | **97.51%** | **97.93%** | **96.43%** | **97.17%** | **99.64%** |
 | Decision Tree | 96.97% | 97.60% | 95.51% | 96.54% | 97.64% |
 | Gradient Boosting | 95.02% | 94.94% | 93.78% | 94.35% | 99.13% |
 | Logistic Regression | 92.81% | 93.44% | 90.10% | 91.74% | 97.85% |
@@ -61,7 +61,7 @@ The system was trained and evaluated on the **UCI Phishing Websites Dataset** (1
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
 User Input (URL)
@@ -88,14 +88,14 @@ Rule-Based Risk Boost (+0–40%)
       │
       ▼
 Final Risk Score → Verdict
-  ├── ≥ 70% → 🚨 PHISHING
-  ├── 30–70% → ⚠️ SUSPICIOUS
-  └── ≤ 30% → ✅ LEGITIMATE
+  ├── ≥ 70% → PHISHING
+  ├── 30–70% → SUSPICIOUS
+  └── ≤ 30% → LEGITIMATE
 ```
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 PhishGuard-AI/
@@ -116,7 +116,7 @@ PhishGuard-AI/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Python 3.9 or higher
@@ -163,7 +163,7 @@ This will produce `phishing_model_rf.pkl`, `scaler_rf.pkl`, and `eval_results.js
 streamlit run app.py
 ```
 
-Open your browser at **https://phishing-detection-jfvf.onrender.com/**
+Open your browser at **http://localhost:8501**
 
 ---
 
@@ -173,16 +173,16 @@ The system extracts **30 features** across 6 categories:
 
 | Category | Features |
 |---|---|
-| 🔗 URL-Based | URL length, @ symbol, double slash redirect, hyphens, IP address, shortening service |
-| 🌐 Domain-Based | Domain age, WHOIS record, registration length, subdomain depth, prefix-suffix |
-| 🔒 SSL / TLS | HTTPS presence, certificate validity, HTTPS token in domain name |
-| 📄 Page-Based | Favicon mismatch, iframes, pop-ups, right-click disabled, form submission to email |
-| 📊 Statistical | Web traffic rank, Google index, links to page, DNS record, page rank |
-| ⚙️ Behavioral | Mouse-over changes, redirect count, on-submit actions, abnormal URL patterns |
+| URL-Based | URL length, @ symbol, double slash redirect, hyphens, IP address, shortening service |
+| Domain-Based | Domain age, WHOIS record, registration length, subdomain depth, prefix-suffix |
+| SSL / TLS | HTTPS presence, certificate validity, HTTPS token in domain name |
+| Page-Based | Favicon mismatch, iframes, pop-ups, right-click disabled, form submission to email |
+| Statistical | Web traffic rank, Google index, links to page, DNS record, page rank |
+| Behavioral | Mouse-over changes, redirect count, on-submit actions, abnormal URL patterns |
 
 ---
 
-## 🛡️ Chrome Extension
+## Chrome Extension
 
 A companion browser extension is included that:
 - Auto-scans every URL you visit in real-time
@@ -198,7 +198,7 @@ A companion browser extension is included that:
 
 ---
 
-## 📦 Dependencies
+## Dependencies
 
 ```
 streamlit>=1.32.0
@@ -213,7 +213,7 @@ python-whois>=0.9.4
 
 ---
 
-## 👥 Team
+## Team
 
 | Name | Enrollment No. |
 |---|---|
@@ -225,7 +225,7 @@ python-whois>=0.9.4
 
 ---
 
-## 📚 References
+## References
 
 1. UCI Machine Learning Repository — [Phishing Websites Dataset](https://archive.ics.uci.edu/dataset/327/phishing+websites) (Mohammad et al., 2014)
 2. PhishTank — https://www.phishtank.com
@@ -234,12 +234,12 @@ python-whois>=0.9.4
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ---
 
 <div align="center">
-Made with ❤️ at BBDU Lucknow · CSE Department · 2024–25
+Made with at BBDU Lucknow · CSE Department · 2024–25
 </div>
